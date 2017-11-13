@@ -36,3 +36,25 @@ better suggestion next time. Useful since everyone's comfortable climate is diff
 Offer clothing choices on Amazon or other online store
 
 Think ahead! Layout your clothes before tomorrow so you can get out the door and run.
+
+
+---------App Architecture---------
+1. View
+menu_dressed2run
+DressedToRunActivity
+
+<<Invoke Action>>
+<<Bind to Data>>
+
+2. ViewModel
+ViewModel<Interface>
+DressedToRunViewModel
+
+<<Interacts With>>
+
+3. Model
+User
+Weather
+Clothing
+
+https://academy.realm.io/posts/eric-maxwell-mvc-mvp-and-mvvm-on-android/
