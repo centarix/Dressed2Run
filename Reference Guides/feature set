@@ -1,0 +1,38 @@
+Features
+
+- Save what was suggested to get "weather" profiles
+- Remember yesterday's weather pattern to get an idea how today might be like
+- Get Local weather forecast automatically
+
+Profile object
+Name, Gender, Birthdate, UserType (Prefer cool or warm/comfy)
+
+Weather object
+Temperature, WeatherDesc, Date
+
+Head Object
+Material
+Description
+
+Arm Object
+Material
+Description
+
+Lower Object
+Material
+Description
+
+Feet Object
+Material
+Description
+
+Advanced
+
+Machine Learning?
+App may occasionally ask "How did we do?" Options (Possible opts: "Too cold!" or "Not Bad") System will record response and offer a 
+better suggestion next time. Useful since everyone's comfortable climate is different. 
+
+
+Offer clothing choices on Amazon or other online store
+
+Think ahead! Layout your clothes before tomorrow so you can get out the door and run.
