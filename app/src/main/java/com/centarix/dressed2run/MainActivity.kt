@@ -1,7 +1,9 @@
 package com.centarix.dressed2run
 
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +17,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { view, insets ->
+            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout())
+            view.setPadding(bars.left, bars.top, bars.right, bars.bottom)
+            insets
+        }
 
         val listView: ListView = findViewById(R.id.listview)
         listView.adapter = CustomAdapter(this, generateFakeValues())
@@ -31,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
     class CustomAdapter(context: Context, private var values: List<String>) :
             ArrayAdapter<String>(context, R.layout.list_item_view, values) {
-        override fun getView(position: Int, convertView: View?, parent: ViewGroup?) : View {
+        override fun getView(position: Int, convertView: View?, parent: ViewGroup) : View {
             val rowView = LayoutInflater.from(context).inflate(R.layout.list_item_view, parent, false)
             val textView: TextView = rowView.findViewById(R.id.text_list_element)
             textView.text = values[position]
