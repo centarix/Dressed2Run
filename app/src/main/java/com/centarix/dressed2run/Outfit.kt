@@ -10,14 +10,14 @@ enum class BodyRegion(@StringRes val label: Int) {
     FEET(R.string.region_feet),
 }
 
-/** Declared innermost to outermost; that order is also the draw order. */
+/** Declared in draw order, innermost first; waistbands come before the jacket so it covers them. */
 enum class ClothingLayer(val region: BodyRegion, @StringRes val label: Int, @ColorInt val color: Int) {
     BEANIE(BodyRegion.HEAD, R.string.layer_beanie, 0xFF8E24AA.toInt()),
     BASE_LAYER(BodyRegion.ARM, R.string.layer_base_layer, 0xFF1E88E5.toInt()),
-    JACKET(BodyRegion.ARM, R.string.layer_jacket, 0xFFF4511E.toInt()),
-    GLOVES(BodyRegion.ARM, R.string.layer_gloves, 0xFF37474F.toInt()),
     TIGHTS(BodyRegion.LOWER, R.string.layer_tights, 0xFF212121.toInt()),
     SHORTS(BodyRegion.LOWER, R.string.layer_shorts, 0xFF43A047.toInt()),
+    JACKET(BodyRegion.ARM, R.string.layer_jacket, 0xFFF4511E.toInt()),
+    GLOVES(BodyRegion.ARM, R.string.layer_gloves, 0xFF37474F.toInt()),
     SOCKS(BodyRegion.FEET, R.string.layer_socks, 0xFFFAFAFA.toInt()),
     SHOES(BodyRegion.FEET, R.string.layer_shoes, 0xFFFFB300.toInt()),
 }
