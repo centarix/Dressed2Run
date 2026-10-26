@@ -17,6 +17,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".RunnerAvatarActivity"
+            android:exported="false"
+            android:label="@string/title_runner_avatar"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

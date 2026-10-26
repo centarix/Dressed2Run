@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Dressed2Run</string>
+    <string name="action_runner_avatar">Avatar</string>
+    <string name="title_runner_avatar">Runner avatar</string>
+    <string name="region_head">Head</string>
+    <string name="region_arm">Arms &amp; torso</string>
+    <string name="region_lower">Lower body</string>
+    <string name="region_feet">Feet</string>
+    <string name="layer_beanie">Beanie</string>
+    <string name="layer_base_layer">Long-sleeve base layer</string>
+    <string name="layer_jacket">Wind jacket</string>
+    <string name="layer_gloves">Gloves</string>
+    <string name="layer_tights">Running tights</string>
+    <string name="layer_shorts">Shorts</string>
+    <string name="layer_socks">Socks</string>
+    <string name="layer_shoes">Running shoes</string>
+    <string name="avatar_description">Runner wearing: %1$s</string>
+    <string name="avatar_description_none">Runner wearing no clothing layers</string>
 </resources>
